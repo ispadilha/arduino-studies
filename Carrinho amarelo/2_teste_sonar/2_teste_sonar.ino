@@ -27,6 +27,9 @@ void loop() {
     Serial.println("Nenhum objeto detectado!");
   } else {
     // Converte o tempo em distância (centímetros)
+    // O número 0,0343 representa aproximadamente a velocidade do som
+    // em centímetros por microssegundo.
+    // Dividimos por dois porque o som percorre o caminho de ida e volta.
     float distancia = duracao * 0.0343 / 2;
 
     Serial.print("Distancia: ");
